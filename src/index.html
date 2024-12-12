@@ -4,13 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo - Ramin Khalouie</title>
+    <title>Calculator - Ramin Khalouie</title>
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
-<body>
-
+<body class="flex justify-center items-center w-full h-screen bg-slate-100">
+    <main class="w-1/2  shadow-neo rounded-lg p-4 flex flex-col gap-1 bg-white">
+        <h1 class="w-full h-24 border p-4 text-3xl flex items-center rounded-full whitespace-nowrap shadow mb-4">0
+        </h1>
+        <div class="grid grid-cols-4 gap-2">
+            <button class="shadow border p-4 text-xl col-span-4 uppercase" data-value="clear">clear</button>
+        </div>
+        <div class="grid grid-cols-4 gap-2">
+            <button class="shadow border p-4 text-xl" data-value="1">1</button>
+            <button class="shadow border p-4 text-xl" data-value="2">2</button>
+            <button class="shadow border p-4 text-xl" data-value="3">3</button>
+            <button class="shadow border p-4 text-xl" data-value="+">+</button>
+        </div>
+        <div class="grid grid-cols-4 gap-2">
+            <button class="shadow border p-4 text-xl" data-value="4">4</button>
+            <button class="shadow border p-4 text-xl" data-value="5">5</button>
+            <button class="shadow border p-4 text-xl" data-value="6">6</button>
+            <button class="shadow border p-4 text-xl" data-value="-">-</button>
+        </div>
+        <div class="grid grid-cols-4 gap-2">
+            <button class="shadow border p-4 text-xl" data-value="7">7</button>
+            <button class="shadow border p-4 text-xl" data-value="8">8</button>
+            <button class="shadow border p-4 text-xl" data-value="9">9</button>
+            <button class="shadow border p-4 text-xl" data-value="*">*</button>
+        </div>
+        <div class="grid grid-cols-4 gap-2">
+            <button class="shadow border p-4 text-xl col-span-2" data-value="0">0</button>
+            <button class="shadow border p-4 text-xl" data-value="=">=</button>
+            <button class="shadow border p-4 text-xl" data-value="/">/</button>
+        </div>
+    </main>
 </body>
 
 </html>
