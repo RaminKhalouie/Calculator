@@ -20,6 +20,9 @@ buttonList.forEach((el) => {
 
     });
 });
+document.addEventListener('keyup', (e) => {
+    SetValue(e.key);
+});
 
 function SetValue(val) {
 
@@ -50,13 +53,20 @@ function SetValue(val) {
         case '-':
         case '*':
         case '/':
-            result.textContent += val;
-            operator = val;
+            if (firstNumber != 0 && secondNumber != 0 && operator != '') {
+                calc();
+            } else {
+                result.textContent += val;
+                operator = val;
+            }
             break;
         case '=':
+        case 'Enter':
             calc();
             break;
         case 'clear':
+        case 'Backspace':
+        case 'Escape':
             reset();
             break;
     }
@@ -95,4 +105,5 @@ function calc() {
     secondNumber = 0;
     operator = '';
     flag = true;
+
 }
